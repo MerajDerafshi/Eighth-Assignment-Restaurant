@@ -20,13 +20,13 @@ ext {
 sourceCompatibility = '23'
 targetCompatibility = '23'
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
   options.encoding = 'UTF-8'
 }
 
 application {
   mainModule = 'ap.restaurant.restaurant'
-  mainClass = 'ap.restaurant.restaurant.HelloApplication'
+  mainClass = 'ap.restaurant.restaurant.Main'
 }
 
 javafx {
@@ -35,13 +35,14 @@ javafx {
 }
 
 dependencies {
-
+  implementation 'org.postgresql:postgresql:42.7.3'
+  implementation 'org.mindrot:jbcrypt:0.4'
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
 test {
-useJUnitPlatform()}
+  useJUnitPlatform()}
 
 jlink {
   imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
