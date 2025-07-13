@@ -1,0 +1,23 @@
+
+.anchor-pane {
+    -fx-background-color: #ca7e2e;
+}
+
+.button {
+    -fx-background-color: #f2b677;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #f2b677;
+}
+
+.text {
+    -fx-fill: linear-gradient(to right, #ff6f00, #ffa040);
+    -fx-font-family: "Arial Black", Arial, sans-serif;
+}

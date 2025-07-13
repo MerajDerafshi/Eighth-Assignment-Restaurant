@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="552.0" prefWidth="800.0" spacing="15" style="-fx-padding: 20px;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ap.restaurant.restaurant.controller.CheckoutController">
+
+    <Label style="-fx-font-size: 20px;" text="Checkout Page">
+      <VBox.margin>
+         <Insets bottom="70.0" />
+      </VBox.margin></Label>
+    <VBox fx:id="checkoutItemsBox" spacing="5" style="-fx-padding: 10;" />
+    <Label fx:id="totalLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;">
+      <VBox.margin>
+         <Insets bottom="80.0" />
+      </VBox.margin></Label>
+
+    <HBox spacing="10">
+        <Button onAction="#handleConfirm" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Confirm Order">
+         <HBox.margin>
+            <Insets left="250.0" />
+         </HBox.margin></Button>
+        <Button onAction="#handleBack" prefHeight="35.0" prefWidth="101.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Back to Menu">
+         <HBox.margin>
+            <Insets left="50.0" />
+         </HBox.margin></Button>
+    </HBox>
+</VBox>
